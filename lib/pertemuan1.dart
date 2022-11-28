@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(const MyApp());
@@ -85,7 +87,22 @@ class _Pertemuan1State extends State<Pertemuan1> {
               onPressed: () {
                 print("Tombol Simpan Ditekan");
               },
-            )
+            ),
+            ElevatedButton(
+              child: Text(
+                "Logout ",
+                style: TextStyle(color: Colors.white),
+              ),
+              onPressed: () async {
+                SharedPreferences pref = await SharedPreferences.getInstance();
+                await pref.setInt("is_logout", 0);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => MyHomePage(
+                            title: "Flutter Demo Home Page Buatan Sendiri"))));
+              },
+            ),
           ],
         ),
       ),
