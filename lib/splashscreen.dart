@@ -1,7 +1,6 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'dart:js';
 import 'package:flutter_application_3/pertemuan1.dart';
 
 class Splashscreen extends StatefulWidget {
@@ -29,7 +28,7 @@ class _SplashscreenState extends State<Splashscreen> {
     return Scaffold(
       backgroundColor: Color.fromARGB(0, 78, 199, 247),
       body: Center(
-        child: Image.asset('images/logo.png'),
+        child: Image.asset('image/logo.png'),
       ),
     );
   }

@@ -28,12 +28,14 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return new SplashScreen(
       seconds: 14,
-      navigateAfterSeconds: new Home(),
+      navigateAfterSeconds: new Home(
+        title: 'Pertemuan 1',
+      ),
       title: new Text(
-        'Welcome In SplashScreen',
+        'Welcome',
         style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
       ),
-      image: Image.asset('images/logo.png'),
+      image: Image.asset('image/logo.png'),
       photoSize: 150.0,
       backgroundColor: Colors.white,
       loaderColor: Colors.red,
